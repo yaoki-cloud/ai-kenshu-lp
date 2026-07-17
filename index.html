@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料セミナー｜手作業をひとつ、AIに任せてみる60分 - ジーロジック・パートナーズ株式会社</title>
+<meta name="description" content="AIにさわったことがない方のための無料体験セミナー（60分）。福岡・名古屋・高松で開催。実際に動いているしくみを見て、自分のボタンで動かして、自社の業務を一緒に棚卸しします。">
+<style>
+  /* ============ Reset & Base ============ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    color: #1c232e;
+    background: #ffffff;
+    line-height: 1.9;
+    font-feature-settings: "palt";
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg { vertical-align: middle; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+
+  :root {
+    --navy: #14335f;
+    --navy-deep: #0d2444;
+    --blue: #2a5ca8;
+    --blue-soft: #eef3fa;
+    --blue-line: #d7e2f0;
+    --ink: #1c232e;
+    --muted: #5b6675;
+    --paper: #ffffff;
+    --paper-alt: #f6f9fc;
+  }
+
+  .inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .inner-narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* ============ Header ============ */
+  .site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(20,51,95,0.08);
+  }
+  .site-header .bar {
+    max-width: 1160px; margin: 0 auto; padding: 0 24px;
+    height: 64px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; flex-direction: column; line-height: 1.3; }
+  .brand .brand-en { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: var(--navy); }
+  .brand .brand-ja { font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
+  .header-cta {
+    display: inline-block; background: var(--navy); color: #fff;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+    padding: 10px 22px; border-radius: 999px;
+    transition: background 0.25s, transform 0.25s;
+  }
+  .header-cta:hover { background: var(--blue); transform: translateY(-1px); }
+
+  /* ============ Hero ============ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex; align-items: center;
+    background:
+      radial-gradient(ellipse 900px 600px at 85% 15%, rgba(42,92,168,0.07), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 8% 90%, rgba(20,51,95,0.05), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+    overflow: hidden;
+  }
+  /* decorative thin rings */
+  .hero::before {
+    content: ""; position: absolute; right: -160px; top: -160px;
+    width: 520px; height: 520px; border-radius: 50%;
+    border: 1px solid rgba(42,92,168,0.16);
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -60px; top: 40px;
+    width: 320px; height: 320px; border-radius: 50%;
+    border: 1px solid rgba(42,92,168,0.10);
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 1080px; margin: 0 auto; padding: 130px 24px 120px;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.18em;
+    color: var(--blue); margin-bottom: 28px;
+  }
+  .hero-eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--blue); }
+  .hero h1 {
+    font-size: clamp(30px, 5.2vw, 54px);
+    font-weight: 700; line-height: 1.55; letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .hero h1 .accent { color: var(--navy); }
+  .hero-lead {
+    margin-top: 30px; font-size: clamp(15px, 1.6vw, 17px);
+    color: var(--muted); max-width: 560px; line-height: 2.1;
+  }
+  .hero-badges { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; border: 1px solid var(--blue-line);
+    color: var(--navy); font-size: 14px; font-weight: 700;
+    padding: 9px 18px; border-radius: 999px;
+    box-shadow: 0 2px 10px rgba(20,51,95,0.05);
+  }
+  .badge svg { width: 16px; height: 16px; }
+  .hero-cta-row { margin-top: 42px; display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    color: #fff; font-size: 16px; font-weight: 700; letter-spacing: 0.05em;
+    padding: 18px 40px; border-radius: 999px; border: none; cursor: pointer;
+    box-shadow: 0 10px 26px rgba(20,51,95,0.24);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(20,51,95,0.30); }
+  .btn-primary svg { width: 18px; height: 18px; }
+  .hero-note { font-size: 13px; color: var(--muted); }
+
+  .scroll-cue {
+    position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+    z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--muted); font-size: 10px; letter-spacing: 0.28em; font-weight: 600;
+  }
+  .scroll-cue .line {
+    width: 1px; height: 44px; background: rgba(20,51,95,0.25); position: relative; overflow: hidden;
+  }
+  .scroll-cue .line::after {
+    content: ""; position: absolute; left: 0; top: -50%;
+    width: 1px; height: 50%; background: var(--navy);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0% { top: -50%; } 60% { top: 100%; } 100% { top: 100%; }
+  }
+
+  /* ============ Section common ============ */
+  section { padding: 100px 0; }
+  .sec-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.24em;
+    color: var(--blue); margin-bottom: 14px;
+  }
+  .sec-title {
+    font-size: clamp(24px, 3.4vw, 34px); font-weight: 700;
+    line-height: 1.6; letter-spacing: 0.02em; color: var(--ink);
+  }
+  .sec-lead { margin-top: 20px; color: var(--muted); font-size: 15.5px; max-width: 640px; }
+
+  /* ============ 課題共感 ============ */
+  .worries { background: var(--paper); }
+  .worry-grid {
+    margin-top: 56px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  }
+  .worry-card {
+    background: var(--paper-alt);
+    border: 1px solid var(--blue-line);
+    border-radius: 14px; padding: 32px 28px;
+  }
+  .worry-card .w-icon {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: #fff; border: 1px solid var(--blue-line);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .worry-card .w-icon svg { width: 22px; height: 22px; }
+  .worry-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.6; }
+  .worry-card p { font-size: 14px; color: var(--muted); line-height: 1.95; }
+  .worry-close {
+    margin-top: 48px; text-align: center;
+    font-size: clamp(17px, 2.2vw, 21px); font-weight: 700; line-height: 2; color: var(--ink);
+  }
+  .worry-close .underline {
+    background: linear-gradient(transparent 68%, rgba(42,92,168,0.18) 68%);
+    padding: 0 2px;
+  }
+
+  /* ============ セミナー体験 3ステップ ============ */
+  .experience { background: var(--paper-alt); }
+  .step-list { margin-top: 60px; display: flex; flex-direction: column; gap: 26px; }
+  .step-card {
+    background: #fff; border: 1px solid var(--blue-line); border-radius: 16px;
+    padding: 40px 44px; display: flex; gap: 36px; align-items: flex-start;
+    box-shadow: 0 4px 18px rgba(20,51,95,0.04);
+  }
+  .step-num {
+    flex-shrink: 0; text-align: center; width: 84px;
+  }
+  .step-num .n-label { display: block; font-size: 10px; letter-spacing: 0.22em; color: var(--blue); font-weight: 700; }
+  .step-num .n-digit {
+    display: block; font-size: 44px; font-weight: 700; line-height: 1.1;
+    color: var(--navy);
+  }
+  .step-num .n-bar { display: block; width: 28px; height: 2px; background: var(--blue); margin: 10px auto 0; }
+  .step-body h3 { font-size: clamp(18px, 2.2vw, 22px); font-weight: 700; color: var(--ink); line-height: 1.6; }
+  .step-body .step-sub { display: block; font-size: 13px; color: var(--blue); font-weight: 700; margin-bottom: 8px; letter-spacing: 0.06em; }
+  .step-body p { margin-top: 12px; font-size: 14.5px; color: var(--muted); line-height: 2; }
+  .exp-note {
+    margin-top: 40px; text-align: center; font-size: 14px; color: var(--muted);
+  }
+
+  /* ============ その先のステップ ============ */
+  .roadmap { background: var(--paper); }
+  .plan-grid { margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .plan-card {
+    border: 1px solid var(--blue-line); border-radius: 16px;
+    padding: 40px 36px; background: #fff; position: relative;
+    display: flex; flex-direction: column;
+  }
+  .plan-card.featured { border-color: rgba(42,92,168,0.45); box-shadow: 0 8px 28px rgba(20,51,95,0.08); }
+  .plan-tag {
+    display: inline-block; align-self: flex-start;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    color: var(--blue); background: var(--blue-soft);
+    padding: 5px 14px; border-radius: 999px; margin-bottom: 18px;
+  }
+  .plan-card h3 { font-size: 21px; font-weight: 700; color: var(--ink); line-height: 1.5; }
+  .plan-price { margin-top: 14px; display: flex; align-items: baseline; gap: 6px; }
+  .plan-price .yen { font-size: 15px; font-weight: 700; color: var(--navy); }
+  .plan-price .num { font-size: 38px; font-weight: 700; color: var(--navy); line-height: 1; letter-spacing: 0.02em; }
+  .plan-price .unit { font-size: 13px; color: var(--muted); }
+  .plan-card p.desc { margin-top: 16px; font-size: 14.5px; color: var(--muted); line-height: 2; }
+  .plan-points { margin-top: 18px; display: flex; flex-direction: column; gap: 8px; }
+  .plan-points li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 13.5px; color: var(--ink); line-height: 1.8;
+  }
+  .plan-points li svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 5px; }
+  .roadmap-next {
+    margin-top: 26px;
+    border: 1px dashed var(--blue-line); border-radius: 16px;
+    padding: 34px 36px; background: var(--paper-alt);
+    display: flex; gap: 24px; align-items: center;
+  }
+  .roadmap-next .rn-icon {
+    flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px;
+    background: #fff; border: 1px solid var(--blue-line);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .roadmap-next .rn-icon svg { width: 24px; height: 24px; }
+  .roadmap-next h3 { font-size: 17px; font-weight: 700; color: var(--navy); }
+  .roadmap-next p { margin-top: 6px; font-size: 13.5px; color: var(--muted); line-height: 1.9; }
+  .subsidy-note {
+    margin-top: 30px; font-size: 13px; color: var(--muted); text-align: center; line-height: 1.9;
+  }
+
+  /* ============ なぜ私たちか ============ */
+  .about {
+    background:
+      radial-gradient(ellipse 800px 500px at 90% 10%, rgba(255,255,255,0.06), transparent 55%),
+      linear-gradient(150deg, var(--navy-deep) 0%, var(--navy) 60%, #1b4176 100%);
+    color: #fff;
+  }
+  .about .sec-label { color: #9db8dd; }
+  .about .sec-title { color: #fff; }
+  .about .sec-lead { color: rgba(255,255,255,0.72); }
+  .reason-grid { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .reason-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px; padding: 34px 28px;
+  }
+  .reason-card .r-num { font-size: 13px; letter-spacing: 0.2em; color: #9db8dd; font-weight: 700; }
+  .reason-card h3 { margin-top: 12px; font-size: 17.5px; font-weight: 700; line-height: 1.7; color: #fff; }
+  .reason-card p { margin-top: 12px; font-size: 13.5px; line-height: 2; color: rgba(255,255,255,0.75); }
+  .about-tagline {
+    margin-top: 60px; text-align: center;
+    font-size: clamp(16px, 2vw, 19px); font-weight: 700; letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.92); line-height: 2;
+  }
+  .about-tagline .small { display: block; font-size: 12px; font-weight: 400; letter-spacing: 0.14em; color: #9db8dd; margin-top: 10px; }
+
+  /* ============ フォーム ============ */
+  .apply { background: var(--paper-alt); }
+  .apply-box {
+    margin-top: 56px; background: #fff;
+    border: 1px solid var(--blue-line); border-radius: 20px;
+    box-shadow: 0 10px 34px rgba(20,51,95,0.07);
+    overflow: hidden;
+    display: grid; grid-template-columns: 5fr 7fr;
+  }
+  .apply-side {
+    background: linear-gradient(160deg, var(--navy-deep), var(--navy));
+    color: #fff; padding: 48px 40px;
+    display: flex; flex-direction: column; justify-content: center; gap: 22px;
+  }
+  .apply-side h3 { font-size: 22px; font-weight: 700; line-height: 1.6; }
+  .apply-side .fact { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.88); }
+  .apply-side .fact svg { flex-shrink: 0; width: 18px; height: 18px; margin-top: 4px; }
+  .apply-side .side-note { font-size: 12px; color: rgba(255,255,255,0.62); line-height: 1.9; }
+  .apply-form { padding: 48px 44px; }
+  .form-row { margin-bottom: 22px; }
+  .form-row label {
+    display: block; font-size: 13.5px; font-weight: 700; color: var(--ink); margin-bottom: 8px;
+  }
+  .req {
+    display: inline-block; font-size: 10px; font-weight: 700; color: #fff;
+    background: var(--blue); border-radius: 4px; padding: 2px 7px; margin-left: 8px; vertical-align: 2px;
+    letter-spacing: 0.06em;
+  }
+  .apply-form input[type="text"], .apply-form input[type="email"], .apply-form select {
+    width: 100%; font-size: 15px; font-family: inherit; color: var(--ink);
+    padding: 14px 16px; border: 1px solid #ccd6e4; border-radius: 10px;
+    background: #fbfcfe; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none; -webkit-appearance: none;
+  }
+  .apply-form input:focus, .apply-form select:focus {
+    border-color: var(--blue); box-shadow: 0 0 0 3px rgba(42,92,168,0.12); background: #fff;
+  }
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: ""; position: absolute; right: 18px; top: 50%;
+    width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: translateY(-70%) rotate(45deg); pointer-events: none;
+  }
+  .form-submit { margin-top: 30px; }
+  .form-submit .btn-primary { width: 100%; justify-content: center; }
+  .form-privacy { margin-top: 16px; font-size: 12px; color: var(--muted); text-align: center; line-height: 1.8; }
+
+  /* ============ Footer ============ */
+  .site-footer {
+    background: var(--navy-deep); color: rgba(255,255,255,0.7);
+    padding: 48px 0 40px; text-align: center;
+  }
+  .site-footer .f-brand { color: #fff; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; }
+  .site-footer .f-brand-en { display: block; font-size: 11px; letter-spacing: 0.18em; color: rgba(255,255,255,0.5); margin-top: 6px; }
+  .site-footer .f-copy { margin-top: 24px; font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); }
+
+  /* ============ Fade-in on scroll (CSS only, subtle) ============ */
+  @media (prefers-reduced-motion: no-preference) {
+    .step-card, .worry-card, .plan-card, .reason-card { animation: none; }
+  }
+
+  /* ============ Responsive ============ */
+  @media (max-width: 900px) {
+    section { padding: 76px 0; }
+    .worry-grid { grid-template-columns: 1fr; }
+    .reason-grid { grid-template-columns: 1fr; }
+    .plan-grid { grid-template-columns: 1fr; }
+    .apply-box { grid-template-columns: 1fr; }
+    .apply-side { padding: 40px 30px; }
+    .apply-form { padding: 38px 28px; }
+    .step-card { flex-direction: column; gap: 18px; padding: 32px 28px; }
+    .step-num { display: flex; align-items: baseline; gap: 12px; width: auto; text-align: left; }
+    .step-num .n-digit { font-size: 34px; }
+    .step-num .n-bar { display: none; }
+    .roadmap-next { flex-direction: column; align-items: flex-start; padding: 28px 26px; }
+    .hero-inner { padding: 110px 24px 110px; }
+  }
+  @media (max-width: 480px) {
+    .btn-primary { font-size: 15px; padding: 16px 30px; }
+    .header-cta { font-size: 12px; padding: 8px 16px; }
+    .badge { font-size: 13px; padding: 8px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="brand-en">ZEALOGIC PARTNERS</span>
+      <span class="brand-ja">ジーロジック・パートナーズ株式会社</span>
+    </a>
+    <a class="header-cta" href="#apply">無料セミナーに申し込む</a>
+  </div>
+</header>
+
+<!-- ================= Hero ================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">FREE SEMINAR ｜ 無料体験セミナー</p>
+    <h1>
+      管理部門の<span class="accent">"あの手作業"</span>、<br>
+      AIに任せてみませんか。
+    </h1>
+    <p class="hero-lead">
+      毎月くり返している転記やチェックの作業。じつは「ボタンを押すと、あとは勝手にやってくれる」形にできるものが少なくありません。むずかしい言葉は使いません。まずは60分、実際に動いているところを見に来てください。
+    </p>
+    <div class="hero-badges">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        参加無料
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        所要60分
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        福岡・名古屋・高松で開催
+      </span>
+    </div>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="#apply">
+        無料セミナーに申し込む
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="hero-note">パソコンが得意でない方こそ、歓迎です。</p>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>SCROLL</span>
+    <span class="line"></span>
+  </div>
+</section>
+
+<!-- ================= 課題共感 ================= -->
+<section class="worries">
+  <div class="inner">
+    <p class="sec-label">ISSUE ｜ こんなお悩みはありませんか</p>
+    <h2 class="sec-title">毎月同じ作業に、<br>時間をとられていませんか。</h2>
+    <div class="worry-grid">
+      <div class="worry-card">
+        <div class="w-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#14335f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        </div>
+        <h3>手作業の転記が終わらない</h3>
+        <p>請求書の内容をシステムに打ち直す。エクセルからエクセルへコピーする。数字を目で見くらべて確認する。毎月、同じ作業のくり返しになっている。</p>
+      </div>
+      <div class="worry-card">
+        <div class="w-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#14335f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+        </div>
+        <h3>「あの人しかできない」仕事がある</h3>
+        <p>やり方がその人の頭の中にしかなく、休まれると仕事が止まる。引き継ぎしようにも、手順を教えるだけで何日もかかってしまう。</p>
+      </div>
+      <div class="worry-card">
+        <div class="w-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#14335f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1"/><circle cx="9" cy="8" r="3.5"/><path d="M19 8v6M22 11h-6"/></svg>
+        </div>
+        <h3>人を増やしたくても、採れない</h3>
+        <p>募集をかけても応募が集まらない。今いる人たちの負担は増えるいっぽうで、新しいことに手をつける余裕がない。</p>
+      </div>
+    </div>
+    <p class="worry-close">
+      そうした作業のいくつかは、<span class="underline">AIに任せられる時代</span>になりました。<br>
+      信じるかどうかは、実物を見てから決めていただければ十分です。
+    </p>
+  </div>
+</section>
+
+<!-- ================= セミナー体験 ================= -->
+<section class="experience" id="seminar">
+  <div class="inner">
+    <p class="sec-label">SEMINAR ｜ 無料セミナー 60分の中身</p>
+    <h2 class="sec-title">読む・聞くではなく、<br>「見て、触って、確かめる」60分です。</h2>
+    <p class="sec-lead">スライドを眺めるだけの説明会ではありません。実物を前にして、ご自身の手で動かしていただきます。</p>
+    <div class="step-list">
+      <div class="step-card">
+        <div class="step-num">
+          <span class="n-label">STEP</span>
+          <span class="n-digit">01</span>
+          <span class="n-bar"></span>
+        </div>
+        <div class="step-body">
+          <span class="step-sub">まずは、見る</span>
+          <h3>本物が動くところを、目の前でご覧いただきます</h3>
+          <p>実際の仕事で毎日使われている自動化のしくみを、その場で動かしてお見せします。作りものの映像ではなく、ふだん動いているものそのままです。「へえ、こんなことまでできるのか」を、まず実感してください。</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">
+          <span class="n-label">STEP</span>
+          <span class="n-digit">02</span>
+          <span class="n-bar"></span>
+        </div>
+        <div class="step-body">
+          <span class="step-sub">つぎに、触る</span>
+          <h3>ご自身のクリックで、動かしていただきます</h3>
+          <p>見るだけでは、まだ半信半疑だと思います。ですので、その場でボタンを押して、動くところをご自身の手で確かめていただきます。むずかしい操作は一切ありません。押すだけです。</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">
+          <span class="n-label">STEP</span>
+          <span class="n-digit">03</span>
+          <span class="n-bar"></span>
+        </div>
+        <div class="step-body">
+          <span class="step-sub">さいごに、考える</span>
+          <h3>自社の業務を、一緒に棚卸しします</h3>
+          <p>「うちの会社なら、どの作業が任せられそうか」。日々の業務をお聞きしながら、その場で一緒に整理します。持ち帰っていただくのは知識ではなく、「自社の場合はここから」という具体的なあたりです。</p>
+        </div>
+      </div>
+    </div>
+    <p class="exp-note">売り込みの場ではありません。まずは「できること・できないこと」を正しく知っていただくためのセミナーです。</p>
+  </div>
+</section>
+
+<!-- ================= その先のステップ ================= -->
+<section class="roadmap" id="service">
+  <div class="inner">
+    <p class="sec-label">SERVICE ｜ セミナーのその先</p>
+    <h2 class="sec-title">「見て終わり」にしない、<br>その先のご用意があります。</h2>
+    <p class="sec-lead">セミナーで手ごたえを感じていただけたら、次は「自社で実際に使えるもの」を一緒に作る段階へ進めます。もちろん、セミナーだけのご参加でもかまいません。</p>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <span class="plan-tag">STEP 1 ｜ 集合研修</span>
+        <h3>自社の1業務を、<br>その場で動く形にする研修</h3>
+        <div class="plan-price">
+          <span class="num">10</span><span class="yen">万円</span><span class="unit">／1社（個別フォロー付き）</span>
+        </div>
+        <p class="desc">複数の会社が集まる研修形式です。座学ではなく、各社が自社の業務をひとつ持ち寄り、その場で「実際に動くもの」まで一緒に作ります。</p>
+        <ul class="plan-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>自社の実際の業務を題材にします</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>研修後も個別フォローで伴走します</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>「作って終わり」ではなく「使える」まで</li>
+        </ul>
+      </div>
+      <div class="plan-card featured">
+        <span class="plan-tag">STEP 2 ｜ 個社別研修</span>
+        <h3>あなたの会社専用に、<br>作り込む研修</h3>
+        <div class="plan-price">
+          <span class="num">30</span><span class="yen">万円</span><span class="unit">／1社</span>
+        </div>
+        <p class="desc">事前にじっくりお話を伺い、その会社の業務に合わせて専用に作り込みます。研修で作ったものは、そのまま翌日からの毎日の仕事で使えます。</p>
+        <ul class="plan-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>事前ヒアリングで業務を把握してから設計</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>自社の環境・データに合わせた専用の内容</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>作ったものは日々の業務でそのまま利用可能</li>
+        </ul>
+      </div>
+    </div>
+    <div class="roadmap-next">
+      <div class="rn-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#14335f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+      </div>
+      <div>
+        <h3>その先へ ── 継続的な開発・導入のご支援</h3>
+        <p>研修で手ごたえをつかんだあとは、ほかの業務への展開や、より本格的なしくみづくりを継続的にお手伝いすることもできます。どこまで進むかは、そのつど一緒に相談しながら決めていきましょう。</p>
+      </div>
+    </div>
+    <p class="subsidy-note">研修費用には、助成金を使える場合があります。要件は個別にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ================= なぜ私たちか ================= -->
+<section class="about" id="about">
+  <div class="inner">
+    <p class="sec-label">ABOUT ｜ なぜ私たちがお伝えできるのか</p>
+    <h2 class="sec-title">教科書ではなく、<br>自分たちが毎日使っているものを見せます。</h2>
+    <div class="reason-grid">
+      <div class="reason-card">
+        <p class="r-num">REASON 01</p>
+        <h3>座学で終わらせません</h3>
+        <p>知識だけ持ち帰っても、月曜日の仕事は変わりません。私たちの研修は「実際に動くものを作って、使い始める」ところまでをゴールにしています。</p>
+      </div>
+      <div class="reason-card">
+        <p class="r-num">REASON 02</p>
+        <h3>教える側が、実務者です</h3>
+        <p>私たちは経理・管理部門の実務と、上場をめざす会社の支援に携わってきたコンサルティング会社です。現場の手作業のつらさを、自分ごととして知っています。</p>
+      </div>
+      <div class="reason-card">
+        <p class="r-num">REASON 03</p>
+        <h3>まず、自社で使っています</h3>
+        <p>セミナーでお見せするのは、私たち自身が自分の会社で毎日使っているしくみです。よそ行きのデモではなく、ふだんの道具をそのままお見せします。</p>
+      </div>
+    </div>
+    <p class="about-tagline">
+      むずかしいことは、こちらで引き受けます。<br>
+      一歩目から、となりで伴走します。
+      <span class="small">ZEALOGIC PARTNERS</span>
+    </p>
+  </div>
+</section>
+
+<!-- ================= 申込フォーム ================= -->
+<section class="apply" id="apply">
+  <div class="inner">
+    <p class="sec-label">ENTRY ｜ 無料セミナーのお申込み</p>
+    <h2 class="sec-title">まずは60分、見に来てください。</h2>
+    <div class="apply-box">
+      <div class="apply-side">
+        <h3>無料体験セミナー<br>お申込みフォーム</h3>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>参加費は無料です。所要時間は約60分です。</span>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>福岡・名古屋・高松エリアで開催します。日程は追ってご案内します。</span>
+        </div>
+        <div class="fact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 6 9-6"/></svg>
+          <span>お申込み後、担当者よりメールでご連絡します。</span>
+        </div>
+        <p class="side-note">セミナーやサービスに関するご質問だけでも、お気軽にお送りください。</p>
+      </div>
+      <form class="apply-form" onsubmit="return false;">
+        <div class="form-row">
+          <label for="f-name">お名前<span class="req">必須</span></label>
+          <input type="text" id="f-name" name="name" placeholder="例）田中 一郎" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="f-company">会社名<span class="req">必須</span></label>
+          <input type="text" id="f-company" name="company" placeholder="例）株式会社サンプル商事" autocomplete="organization">
+        </div>
+        <div class="form-row">
+          <label for="f-email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="f-email" name="email" placeholder="例）info@example.co.jp" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="f-area">ご希望のエリア<span class="req">必須</span></label>
+          <div class="select-wrap">
+            <select id="f-area" name="area">
+              <option value="">選択してください</option>
+              <option value="fukuoka">福岡</option>
+              <option value="nagoya">名古屋</option>
+              <option value="takamatsu">高松</option>
+              <option value="undecided">未定・相談したい</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">
+            この内容で申し込む
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <p class="form-privacy">ご入力いただいた情報は、本セミナーのご案内以外の目的には使用しません。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="inner">
+    <p class="f-brand">ジーロジック・パートナーズ株式会社<span class="f-brand-en">ZEALOGIC PARTNERS</span></p>
+    <p class="f-copy">&copy; Zealogic Partners Inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>
