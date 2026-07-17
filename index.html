@@ -233,6 +233,34 @@
     font-size: 13.5px; color: var(--ink); line-height: 1.8;
   }
   .plan-points li svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 5px; }
+  /* before -> after ミニ要素 */
+  .ba-block {
+    margin: 52px 0 4px;
+    background: var(--paper-alt);
+    border: 1px solid var(--blue-line);
+    border-radius: 16px;
+    padding: 34px 36px;
+  }
+  .ba-head { font-size: 13px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 6px; }
+  .ba-case { font-size: 15px; color: var(--ink); font-weight: 700; margin-bottom: 22px; line-height: 1.7; }
+  .ba-flow { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; gap: 18px; }
+  .ba-col {
+    background: #fff; border: 1px solid var(--blue-line); border-radius: 12px;
+    padding: 22px 24px;
+  }
+  .ba-col.after { border-color: rgba(42,92,168,0.4); box-shadow: 0 4px 16px rgba(20,51,95,0.07); }
+  .ba-tag {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    padding: 4px 12px; border-radius: 999px; margin-bottom: 12px;
+  }
+  .ba-tag.before { background: #eef1f5; color: var(--muted); }
+  .ba-tag.after { background: var(--blue-soft); color: var(--blue); }
+  .ba-col h4 { font-size: 15.5px; font-weight: 700; color: var(--ink); line-height: 1.7; }
+  .ba-col p { margin-top: 8px; font-size: 13px; color: var(--muted); line-height: 1.9; }
+  .ba-arrow { display: flex; align-items: center; justify-content: center; }
+  .ba-arrow svg { width: 26px; height: 26px; }
+  .ba-note { margin-top: 18px; font-size: 12px; color: var(--muted); line-height: 1.8; }
+
   .roadmap-next {
     margin-top: 26px;
     border: 1px dashed var(--blue-line); border-radius: 16px;
@@ -352,6 +380,8 @@
     .step-num .n-digit { font-size: 34px; }
     .step-num .n-bar { display: none; }
     .roadmap-next { flex-direction: column; align-items: flex-start; padding: 28px 26px; }
+    .ba-flow { grid-template-columns: 1fr; }
+    .ba-arrow svg { transform: rotate(90deg); }
     .hero-inner { padding: 110px 24px 110px; }
   }
   @media (max-width: 480px) {
@@ -383,7 +413,7 @@
       AIに任せてみませんか。
     </h1>
     <p class="hero-lead">
-      毎月くり返している転記やチェックの作業。じつは「ボタンを押すと、あとは勝手にやってくれる」形にできるものが少なくありません。むずかしい言葉は使いません。まずは60分、実際に動いているところを見に来てください。
+      毎月くり返している転記やチェックの作業。じつは「ボタンを押すと、あとは勝手にやってくれる」形にできるものが少なくありません。むずかしい言葉は使いません。オンラインで、実際に動いているところをご覧いただけます。全国どこからでも、会社のパソコン1台でご参加いただけます。
     </p>
     <div class="hero-badges">
       <span class="badge">
@@ -395,8 +425,8 @@
         所要60分
       </span>
       <span class="badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        福岡・名古屋・高松で開催
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="13" rx="2"/><path d="M8 21h8M12 17.5V21"/></svg>
+        オンライン開催
       </span>
     </div>
     <div class="hero-cta-row">
@@ -443,7 +473,7 @@
     </div>
     <p class="worry-close">
       そうした作業のいくつかは、<span class="underline">AIに任せられる時代</span>になりました。<br>
-      信じるかどうかは、実物を見てから決めていただければ十分です。
+      信じるかどうかは、オンラインで実物をご覧になってから決めていただければ十分です。
     </p>
   </div>
 </section>
@@ -453,7 +483,7 @@
   <div class="inner">
     <p class="sec-label">SEMINAR ｜ 無料セミナー 60分の中身</p>
     <h2 class="sec-title">読む・聞くではなく、<br>「見て、触って、確かめる」60分です。</h2>
-    <p class="sec-lead">スライドを眺めるだけの説明会ではありません。実物を前にして、ご自身の手で動かしていただきます。</p>
+    <p class="sec-lead">スライドを眺めるだけの説明会ではありません。オンラインでつないで、画面越しにご自身の手元でも動かしていただきます。</p>
     <div class="step-list">
       <div class="step-card">
         <div class="step-num">
@@ -463,7 +493,7 @@
         </div>
         <div class="step-body">
           <span class="step-sub">まずは、見る</span>
-          <h3>本物が動くところを、目の前でご覧いただきます</h3>
+          <h3>本物が動くところを、画面越しにご覧いただきます</h3>
           <p>実際の仕事で毎日使われている自動化のしくみを、その場で動かしてお見せします。作りものの映像ではなく、ふだん動いているものそのままです。「へえ、こんなことまでできるのか」を、まず実感してください。</p>
         </div>
       </div>
@@ -487,12 +517,12 @@
         </div>
         <div class="step-body">
           <span class="step-sub">さいごに、考える</span>
-          <h3>自社の業務を、一緒に棚卸しします</h3>
-          <p>「うちの会社なら、どの作業が任せられそうか」。日々の業務をお聞きしながら、その場で一緒に整理します。持ち帰っていただくのは知識ではなく、「自社の場合はここから」という具体的なあたりです。</p>
+          <h3>自社の作業が「どれくらい減らせそうか」、その場で目安が分かります</h3>
+          <p>「うちの会社なら、どの作業が任せられそうか」。日々の業務をお聞きしながら、その場で一緒に整理します。どの作業が、月におよそどれくらい減らせそうか——自社に当てはめた目安の数字まで、その場でお持ち帰りいただけます。その数字を見ると、たいていの方が「じゃあ、実際に作ってみたい」と思われます。</p>
         </div>
       </div>
     </div>
-    <p class="exp-note">売り込みの場ではありません。まずは「できること・できないこと」を正しく知っていただくためのセミナーです。</p>
+    <p class="exp-note">売り込みの場ではありません。まずは「できること・できないこと」と「自社ならどこから」を正しく知っていただくためのセミナーです。</p>
   </div>
 </section>
 
@@ -500,33 +530,55 @@
 <section class="roadmap" id="service">
   <div class="inner">
     <p class="sec-label">SERVICE ｜ セミナーのその先</p>
-    <h2 class="sec-title">「見て終わり」にしない、<br>その先のご用意があります。</h2>
-    <p class="sec-lead">セミナーで手ごたえを感じていただけたら、次は「自社で実際に使えるもの」を一緒に作る段階へ進めます。もちろん、セミナーだけのご参加でもかまいません。</p>
+    <h2 class="sec-title">無料セミナーは、あくまで"入口"です。</h2>
+    <p class="sec-lead">セミナーで見えるのは「自社ならどこから、どれくらい」までです。それを毎日ほんとうに動く形にするには、自社の実際のデータで作り込む一手間が必要になります。その一手間を、一緒に越えるためのご用意です。もちろん、セミナーだけのご参加でもかまいません。</p>
+
+    <div class="ba-block">
+      <p class="ba-head">たとえば、こんな形になります</p>
+      <p class="ba-case">（例）従業員80名ほどの会社で、毎月の勤怠チェックを見直したケース</p>
+      <div class="ba-flow">
+        <div class="ba-col before">
+          <span class="ba-tag before">これまで</span>
+          <h4>手作業で、ひとつずつ確認</h4>
+          <p>打刻のもれや残業時間のずれを、担当者が名簿とにらめっこしながら目で確認。月末になると、この作業に何時間もとられていた。</p>
+        </div>
+        <div class="ba-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+        <div class="ba-col after">
+          <span class="ba-tag after">導入後</span>
+          <h4>ボタンひとつで、あやしい所だけ表示</h4>
+          <p>ボタンを押すと、確認が必要な人だけが自動でリストに並ぶ。担当者は最後の判断だけに集中できる。空いた時間を、ほかの仕事に回せるようになった。</p>
+        </div>
+      </div>
+      <p class="ba-note">これは説明のための一例です。効果は会社や業務によって変わりますので、実際の見立てはセミナーで一緒に確認しましょう。</p>
+    </div>
+
     <div class="plan-grid">
       <div class="plan-card">
         <span class="plan-tag">STEP 1 ｜ 集合研修</span>
-        <h3>自社の1業務を、<br>その場で動く形にする研修</h3>
+        <h3>まず1つ、自社で動くものを<br>一緒に作る</h3>
         <div class="plan-price">
           <span class="num">10</span><span class="yen">万円</span><span class="unit">／1社（個別フォロー付き）</span>
         </div>
-        <p class="desc">複数の会社が集まる研修形式です。座学ではなく、各社が自社の業務をひとつ持ち寄り、その場で「実際に動くもの」まで一緒に作ります。</p>
+        <p class="desc">何社かで集まって進める研修です。各社が自社の業務をひとつ持ち寄り、その場で「実際に動くもの」を1つ、一緒に完成させます。座学で終わりません。福岡・名古屋・高松の各エリアで開催します。</p>
         <ul class="plan-points">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>自社の実際の業務を題材にします</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>自社の実際の業務が題材になります</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>研修後も個別フォローで伴走します</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>「作って終わり」ではなく「使える」まで</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>その日のうちに、動くものが1つ手に入ります</li>
         </ul>
       </div>
       <div class="plan-card featured">
         <span class="plan-tag">STEP 2 ｜ 個社別研修</span>
-        <h3>あなたの会社専用に、<br>作り込む研修</h3>
+        <h3>事前にうかがって、<br>専用に作り込む</h3>
         <div class="plan-price">
           <span class="num">30</span><span class="yen">万円</span><span class="unit">／1社</span>
         </div>
-        <p class="desc">事前にじっくりお話を伺い、その会社の業務に合わせて専用に作り込みます。研修で作ったものは、そのまま翌日からの毎日の仕事で使えます。</p>
+        <p class="desc">事前にじっくりお話を伺い、その会社の業務とデータに合わせて専用に作り込みます。研修が終わった翌日から、そのまま毎日の仕事で使えます。「自分たちの現場そのもの」で動くのがちがいです。</p>
         <ul class="plan-points">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>事前ヒアリングで業務を把握してから設計</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>自社の環境・データに合わせた専用の内容</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>作ったものは日々の業務でそのまま利用可能</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>自社のデータに合わせた、専用の内容</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#2a5ca8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>翌日から、そのまま毎日の仕事で使えます</li>
         </ul>
       </div>
     </div>
@@ -576,22 +628,22 @@
 <!-- ================= 申込フォーム ================= -->
 <section class="apply" id="apply">
   <div class="inner">
-    <p class="sec-label">ENTRY ｜ 無料セミナーのお申込み</p>
-    <h2 class="sec-title">まずは60分、見に来てください。</h2>
+    <p class="sec-label">ENTRY ｜ 無料オンラインセミナーのお申込み</p>
+    <h2 class="sec-title">まずは60分、画面越しにご覧ください。</h2>
     <div class="apply-box">
       <div class="apply-side">
-        <h3>無料体験セミナー<br>お申込みフォーム</h3>
+        <h3>無料オンライン<br>体験セミナー お申込みフォーム</h3>
         <div class="fact">
           <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
           <span>参加費は無料です。所要時間は約60分です。</span>
         </div>
         <div class="fact">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <span>福岡・名古屋・高松エリアで開催します。日程は追ってご案内します。</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="13" rx="2"/><path d="M8 21h8M12 17.5V21"/></svg>
+          <span>オンラインで開催します。全国どこからでも、パソコン1台でご参加いただけます。</span>
         </div>
         <div class="fact">
           <svg viewBox="0 0 24 24" fill="none" stroke="#9db8dd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 6 9-6"/></svg>
-          <span>お申込み後、担当者よりメールでご連絡します。</span>
+          <span>お申込み後、参加用のご案内と日程を、担当者よりメールでお送りします。</span>
         </div>
         <p class="side-note">セミナーやサービスに関するご質問だけでも、お気軽にお送りください。</p>
       </div>
@@ -609,14 +661,14 @@
           <input type="email" id="f-email" name="email" placeholder="例）info@example.co.jp" autocomplete="email">
         </div>
         <div class="form-row">
-          <label for="f-area">ご希望のエリア<span class="req">必須</span></label>
+          <label for="f-area">お近くの拠点（任意）</label>
           <div class="select-wrap">
             <select id="f-area" name="area">
-              <option value="">選択してください</option>
+              <option value="">選択しない</option>
               <option value="fukuoka">福岡</option>
               <option value="nagoya">名古屋</option>
               <option value="takamatsu">高松</option>
-              <option value="undecided">未定・相談したい</option>
+              <option value="other">その他の地域</option>
             </select>
           </div>
         </div>
@@ -626,7 +678,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <p class="form-privacy">ご入力いただいた情報は、本セミナーのご案内以外の目的には使用しません。</p>
+        <p class="form-privacy">「お近くの拠点」は、将来の集合研修のご案内にのみ使わせていただく任意項目です。ご入力いただいた情報は、本セミナーのご案内以外の目的には使用しません。</p>
       </form>
     </div>
   </div>
